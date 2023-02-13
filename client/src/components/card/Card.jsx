@@ -5,7 +5,7 @@ import UpdateButton from "../button/UpdateButton";
 const Card = ({ book }) => {
     const { id, title, desc, price } = book;
     return (
-        <div className="mb-10 text-center " key={id}>
+        <div className="mb-10 text-center ">
             {/* {books.cover && ( */}
             <img
                 className="h-60 rounded-lg shadow-md"
@@ -17,8 +17,8 @@ const Card = ({ book }) => {
             <p className="">{desc}</p>
             <span>{price}</span>
             <div className="flex gap-4">
-                <DeleteButton />
-                <UpdateButton />
+                <DeleteButton id={id} />
+                <UpdateButton id={id} />
             </div>
         </div>
     );

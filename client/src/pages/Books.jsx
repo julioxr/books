@@ -26,7 +26,7 @@ const Books = () => {
             <h1 className="mb-6 text-2xl">Popular books</h1>
             <div className="flex flex-wrap items-center justify-between">
                 {books.map((book) => (
-                    <Card book={book} />
+                    <Card book={book} key={book.id} />
                 ))}
             </div>
             <button>

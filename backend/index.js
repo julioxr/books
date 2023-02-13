@@ -50,6 +50,21 @@ app.post("/books", (req, res) => {
     });
 });
 
+app.delete("/books/:id", (req, res) => {
+    const bookId = req.params.id;
+    const q = "DELETE FROM books WHERE id = ?";
+
+    db.query(q, [bookId], (error, data) => {
+        if (error) {
+            return res.json(error);
+        }
+        return res.json({
+            status: "200",
+            message: "book deleted",
+        });
+    });
+});
+
 app.listen(3000, () => {
     console.log("escuchando en el puerto 3000");
 });
