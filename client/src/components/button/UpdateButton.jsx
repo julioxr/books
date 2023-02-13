@@ -1,9 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const UpdateButton = () => {
+const UpdateButton = ({ id }) => {
     return (
         <>
-            <div>Update</div>
+            <button>
+                <Link to={`/update/${id}`}>Update</Link>
+            </button>
         </>
     );
 };

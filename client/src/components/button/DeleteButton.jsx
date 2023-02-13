@@ -4,8 +4,15 @@ import React from "react";
 const DeleteButton = ({ id }) => {
     const deleteBook = async (id) => {
         try {
-            await axios.delete(`http://192.168.1.106:3000/books/${id}`);
-            window.location.reload();
+            await axios
+                .delete(`http://192.168.1.106:3000/books/${id}`)
+                .then(({ data }) => {
+                    console.log(data.status);
+                    if (data.status == 404) {
+                    } else {
+                        window.location.reload();
+                    }
+                });
         } catch (error) {
             console.log(error);
         }
@@ -13,7 +20,7 @@ const DeleteButton = ({ id }) => {
 
     return (
         <>
-            <div onClick={() => deleteBook(id)}>Delete</div>
+            <button onClick={() => deleteBook(id)}>Delete</button>
         </>
     );
 };

@@ -5,7 +5,7 @@ import UpdateButton from "../button/UpdateButton";
 const Card = ({ book }) => {
     const { id, title, desc, price } = book;
     return (
-        <div className="mb-10 text-center ">
+        <div className="mb-10 text-center " id={id}>
             {/* {books.cover && ( */}
             <img
                 className="h-60 rounded-lg shadow-md"

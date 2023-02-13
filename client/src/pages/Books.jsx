@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import LargeCard from "../components/large_card/LargeCard";
+import MiniCard from "../components/mini_card/miniCard";
 import Card from "../components/card/Card";
 
 const Books = () => {
@@ -12,7 +13,6 @@ const Books = () => {
             try {
                 const res = await axios.get("http://192.168.1.106:3000/books");
                 setBooks(res.data);
-                console.log(res);
             } catch (error) {
                 console.log(error);
             }
@@ -24,6 +24,7 @@ const Books = () => {
         <div className="mt-16 z-20 mb-12">
             <LargeCard />
             <h1 className="mb-6 text-2xl">Popular books</h1>
+            <MiniCard />
             <div className="flex flex-wrap items-center justify-between">
                 {books.map((book) => (
                     <Card book={book} key={book.id} />
