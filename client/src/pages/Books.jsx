@@ -25,6 +25,9 @@ const Books = () => {
             <LargeCard />
             <h1 className="mb-6 text-2xl">Popular books</h1>
             <MiniCard />
+            <MiniCard />
+            <MiniCard />
+            <MiniCard />
             <div className="flex flex-wrap items-center justify-between">
                 {books.map((book) => (
                     <Card book={book} key={book.id} />

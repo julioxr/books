@@ -12,7 +12,9 @@ const LargeCard = () => {
                     alt=""
                 />
                 <div className="absolute bottom-0 left-0 right-0 h-20 backdrop-blur-lg flex justify-between px-8 items-center rounded-b-lg text-white">
-                    <h4>Food in the Ancient</h4>
+                    <h4 className="w-40">
+                        Food in the Ancient World from A to Z
+                    </h4>
                     <div>
                         <p>15 hs Listen</p>
                         <span>Andrew Dalby</span>
