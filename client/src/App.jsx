@@ -4,6 +4,7 @@ import Add from "./pages/Add";
 import Update from "./pages/Update";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
+import BookDetails from "./pages/BookDetails";
 
 function App() {
     return (
@@ -13,7 +14,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Books />} />
                     <Route path="/add" element={<Add />} />
-                    {/* <Route path="/update" element={<Update />} /> */}
+                    <Route path="/book/:id" element={<BookDetails />} />
                     <Route path="/update/:id" element={<Update />} />
                 </Routes>
                 <Footer />

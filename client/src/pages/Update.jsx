@@ -12,7 +12,8 @@ const Update = () => {
                 const res = await axios.get(
                     `http://192.168.1.106:3000/update/${bookId}`
                 );
-                console.log(res.data[0].desc);
+                console.log("El libro que queres actualizar es el ");
+                console.log(res.data[0].title);
             } catch (error) {
                 console.log(error);
             }
@@ -21,6 +22,10 @@ const Update = () => {
     }, []);
     return (
         <>
+            <br />
+            <br />
+            <br />
+            <br />
             <h1>Pagina de update</h1>
             <span>Vas actualizar el id</span>
         </>

@@ -14,10 +14,6 @@ const db = mysql.createConnection({
 app.use(express.json());
 app.use(cors());
 
-app.get("/", (req, res) => {
-    res.send("Hello World!");
-});
-
 app.get("/books", (req, res) => {
     const q = "SELECT * FROM books";
     db.query(q, (error, data) => {
@@ -25,6 +21,31 @@ app.get("/books", (req, res) => {
             return res.json(error);
         }
         return res.json(data);
+    });
+});
+
+app.get("/book/:id", (req, res) => {
+    const bookId = req.params.id;
+    const q = "SELECT * FROM books WHERE id = ?";
+    db.query(q, [bookId], (error, data) => {
+        try {
+            return res.json(data);
+        } catch (error) {
+            console.log(error);
+        }
+    });
+});
+
+// No enviar toda la data, el id no debe ser modificado
+app.get("/update/:id", (req, res) => {
+    const bookId = req.params.id;
+    const q = "SELECT * FROM books WHERE id = ?";
+    db.query(q, [bookId], (error, data) => {
+        try {
+            return res.json(data);
+        } catch (error) {
+            console.log(error);
+        }
     });
 });
 
