@@ -10,7 +10,8 @@ const DeleteButton = ({ id }) => {
                     console.log(data.status);
                     if (data.status == 404) {
                     } else {
-                        window.location.reload();
+                        // Ver para redireccionar a books
+                        window.location.reload("/books");
                     }
                 });
         } catch (error) {

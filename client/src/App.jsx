@@ -9,7 +9,7 @@ import Explore from "./pages/Explore";
 
 function App() {
     return (
-        <div className="bg-[#FBF8F2] h-screen overflow-scroll px-4">
+        <div className="h-auto w-[390px] overflow-scroll bg-[#FBF8F2] px-4">
             <BrowserRouter>
                 <Navbar />
                 <Routes>

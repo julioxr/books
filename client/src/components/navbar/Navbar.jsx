@@ -5,11 +5,11 @@ import logo from "../../assets/logo.png";
 const Navbar = () => {
     return (
         <>
-            <header className="w-full z-20 h-12 -mx-4 flex justify-around items-center fixed bg-[#FBF8F2]">
+            <header className="fixed top-0 left-0 right-0 z-20 flex h-12 w-full items-center justify-around bg-[#FBF8F2]">
                 <Link to={"/"}>
                     <img className="h-8" src={logo} alt="logo de compañia" />
                 </Link>
-                <div className="flex gap-4 items-center">
+                <div className="flex items-center gap-4">
                     <span>Notis</span>
                     <span>Search</span>
                 </div>

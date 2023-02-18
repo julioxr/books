@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import DeleteButton from "../button/DeleteButton";
-import UpdateButton from "../button/UpdateButton";
 
 const Card = ({ book }) => {
     const { id, title, desc, price } = book;
@@ -19,10 +17,7 @@ const Card = ({ book }) => {
             <h2>{title}</h2>
             <p className="">{desc}</p>
             <span>{price}</span>
-            <div className="flex gap-4">
-                <DeleteButton id={id} />
-                <UpdateButton id={id} />
-            </div>
+            <div className="flex gap-4"></div>
         </div>
     );
 };

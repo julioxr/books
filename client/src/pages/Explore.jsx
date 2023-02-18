@@ -19,7 +19,7 @@ const Explore = () => {
         fetchAllBooks();
     }, []);
     return (
-        <>
+        <section className="scroll-smooth">
             <br />
             <br />
             <br />
@@ -37,7 +37,7 @@ const Explore = () => {
                     ))}
                 </div>
             </div>
-        </>
+        </section>
     );
 };
 
